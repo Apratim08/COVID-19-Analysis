@@ -1,4 +1,4 @@
-
+<a name="readme-top"></a>
 
   <h3 align="center">COVID-19 Analysis</h3>
 
@@ -9,7 +9,7 @@
     <br />
     <br />
     .
-    <a href="https://www.youtube.com/watch?v=XPJm1Naw9_E">View YouTube tutorial</a>
+    <a href="https://www.youtube.com/watch?v=XPJm1Naw9_E">Video Walkthrough</a>
     ·
     <a href="https://github.com/Apratim08/COVID-19-Analysis/issues">Issues</a>
     ·
@@ -47,6 +47,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
+<a name="#about-the-project"></a>
 ## About The Project
   <p align="justify">
 In this project we are analyzing COVID-19 data during the years 2020-2022, focusing particularly on the United States. The primary datasets utilized include the ’time series covid19 confirmed US’ and ’time series covid19 deaths US’ from
@@ -64,40 +65,28 @@ the age groups most susceptible to COVID-19.
 <!-- GETTING STARTED -->
 ## Project Details
 
-Feature engineering played a pivotal role in enhancing the dataset for predictive modeling. Time series
-components were isolated, emphasizing trends, seasonality, and residuals from cumulative daily cases, with a
-specific focus on California for prediction purposes. Demographic features were also engineered, categorizing
-and encoding age to enrich predictions related to age groups affected by COVID-19, pneumonia, or influenza.
 The first study aims to forecast the number of COVID-19 cases for the upcoming month in the United
 States by employing time series analysis of historical data. The objective is to provide healthcare systems
 and policymakers with predictive insights to prepare and mitigate the potential overburdening of medical
 infrastructure.
+
+
+<a href="https://github.com/Apratim08/COVID-19-Analysis/blob/master/analysis/US_COVID_time_series.ipynb"><strong>Check out Notebook »</strong></a>
 <br />
-<a href="https://github.com/Apratim08/COVID-19-Analysis"><strong>Explore the docs »</strong></a>
 
 The dataset comprised daily confirmed COVID-19 cases and deaths for all U.S. states over the last two
-years. The dataset was preprocessed by grouping the data by state. Preliminary analysis identified New York
-and California as states with the highest number of deaths and confirmed cases, respectively. These states were
-selected for in-depth analysis due to their significant data volume, which is likely to yield more reliable insights.
-The primary method for forecasting COVID-19 cases is time series analysis. Time series analysis is
-particularly suitable for this research due to its effectiveness in analyzing data points collected or recorded at
-regular time intervals. This approach helps in identifying patterns, trends, and seasonal variations in the
-data, which are crucial for accurate forecasting.
-Model Selection and Development
-Linear regression models were developed for New York and California. The choice of linear regression is
-grounded in its simplicity and effectiveness in capturing trends in time series data. The models predict the
+years. Preliminary analysis identified New York and California as states with significant data volume and was hence chosen for further analysis.
+
+<img src="https://i.postimg.cc/JzsFTv1Y/1.png" style="width:1000px;height:600px;">
+
+#### Model Selection and Development
+Linear regression models were developed for New York and California. The models predicted the
 number of COVID-19 cases based on historical data trends.
 We employed various models for the Categorical Prediction task, including linear regression to predict
 the age group and decision trees via Random Forest. The latter showed the best results among the models
-tested, specifically for the 17-class classification task of all age group labels within the dataset!
-Feature Engineering
-Feature engineering involved extracting meaningful features from the time series data. This included creating
-time-based features like month, week, and day to capture seasonal and cyclical trends. Additional features such
-3
-as moving averages were also computed to smooth out short-term fluctuations and highlight longer-term trends.
-We used label encoding and filtered the data for the classification task of 17 classes for the ”Provincial
-COVID-19 deaths by Sex and Age” dataset.
-Regularization
+tested, specifically for the 17-class classification task of all age group labels within the dataset.
+ 
+#### Regularization
 Given the complexity of the dataset, we applied lasso and ridge regularization techniques to prevent overfitting
 for the time series task and reduce the potential for highly variable COVID-19 case numbers.
 We experimented with various hyperparameters for the classification task using different models. After
@@ -105,55 +94,35 @@ comparing the results, we found that the decision tree classifier performed the 
 adjusting the n estimators parameter, which determines the number of decision trees in the random forest
 ensemble. Additionally, we set the random state to 42, which sets the seed for the random number generator
 and ensures that the results are reproducible when the algorithm involves random processes.
-Inference and Prediction Methods
+
+#### Inference and Prediction Methods
 The models were used to make inferences about the trends in COVID-19 cases and to forecast future cases.
 The forecasting was conducted for a one-month horizon, aligning with the research objective to provide
 short-term predictive insights.
-Model Evaluation and Validation
+
+<img src="https://i.postimg.cc/26YrNryS/6.png" style="width:800px;height:400px;">
+
+#### Model Evaluation and Validation
 To ensure the model’s robustness, cross-validation was performed. This involved dividing the datasets into
 training and testing sets to validate the model’s performance on unseen data. The model was trained on a
 subset of the data and tested on another subset to evaluate its predictive accuracy.
-Model Selection and Evaluation Metrics
-The model’s performance was evaluated using Root Mean Squared Error (RMSE
+The model’s performance was evaluated by calculating the Root Mean Squared Error (RMSE)
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<img src="https://i.postimg.cc/YSCqvpkD/9.jpg" style="width:1000px;height:400px;">
 
 ## Conclusion
 
+In the realm of public health, the exploration and analysis of COVID-19 data have emerged as crucial
+components for understanding the dynamics of the pandemic. Conducting exploratory data analysis (EDA)
+on COVID-19 datasets provides invaluable insights into the spread, impact, and patterns of the virus across
+regions and populations. Furthermore, the development of prediction models becomes essential for forecasting the future trajectory of the pandemic, anticipating
+potential surges, and optimizing resource allocation. Sophisticated machine learning models, such as Long Short-Term Memory Networks (LSTMs), Gated
+Recurrent Units (GRUs), and Wide Deep Learning (Wide Deep), offer a more advanced approach to
+capturing complex relationships within the ”Provincial COVID-19 deaths by Sex and Age” dataset. These
+models are particularly useful for handling sequential or structured data, allowing them to learn intricate
+dependencies and patterns within the age labels for improved predictions.
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,15 +131,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Improve Model Accuracy.
+- [ ] Update dataset with recent available data.
+- [ ] Perform similar tests with other diseases and compare with COVID-19.
+- [ ] Incorporate more sophistacted machine learning tools.
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,15 +159,6 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -217,49 +173,12 @@ Project Link: [Github repo link](https://github.com/Apratim08/COVID-19-Analysis)
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* DATA100 Course, UC Berkeley - for giving us the opportuntiy to carry out this project.
+* Yuri Kravchenko, Nataliia Dakhno, Olga Leshchenko, and Anastasiia Tolstokorova. Machine learning
+algorithms for predicting the results of covid-19 coronavirus infection. In IT&I Workshops, pages 371–381, 2020.
+* Raghavendra Kumar, Anjali Jain, Arun Kumar Tripathi, and Shaifali Tyagi. Covid-19 outbreak: An
+epidemic analysis using time series prediction model. In 2021 11th International Conference on Cloud
+Computing, Data Science Engineering (Confluence), pages 1090–1094, 2021.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
