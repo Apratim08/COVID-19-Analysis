@@ -24,21 +24,13 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#project-details">Project Details</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -63,6 +55,7 @@ the age groups most susceptible to COVID-19.
 
 
 <!-- GETTING STARTED -->
+<a name="#project-details"></a>
 ## Project Details
 
 The first study aims to forecast the number of COVID-19 cases for the upcoming month in the United
@@ -110,6 +103,7 @@ The model’s performance was evaluated by calculating the Root Mean Squared Err
 
 <img src="https://i.postimg.cc/YSCqvpkD/9.jpg" style="width:1000px;height:400px;">
 
+<a name="#conclusion"></a>
 ## Conclusion
 
 In the realm of public health, the exploration and analysis of COVID-19 data have emerged as crucial
@@ -127,7 +121,7 @@ dependencies and patterns within the age labels for improved predictions.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<a name="#roadmap"></a>
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -140,7 +134,7 @@ dependencies and patterns within the age labels for improved predictions.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<a name="#contributing"></a>
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -160,6 +154,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- CONTACT -->
+<a name="#contact"></a>
 ## Contact
 
 Apratim Banerjee - [LinkedIn](https://www.linkedin.com/in/banerjee-apratim/) - apratimbanerjee@berkeley.edu
@@ -171,6 +166,7 @@ Project Link: [Github repo link](https://github.com/Apratim08/COVID-19-Analysis)
 
 
 <!-- ACKNOWLEDGMENTS -->
+<a name="#acknowledgements"></a>
 ## Acknowledgments
 
 * DATA100 Course, UC Berkeley - for giving us the opportuntiy to carry out this project.
